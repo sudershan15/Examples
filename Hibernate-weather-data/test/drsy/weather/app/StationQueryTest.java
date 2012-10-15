@@ -116,7 +116,8 @@ public class StationQueryTest {
 		int date = 20121005;
 		String station = "DKRM8";
 		int time = 1215;
-		int tot = 0, count = 0, avg = 0;
+		int tot = 0, count = 0;
+		float avg = 0;
 		Station template = new Station();
 		template.setId(station);
 		List<Station> list = ppl.findStation(template);
@@ -134,7 +135,7 @@ public class StationQueryTest {
 				}
 			}
 			avg = tot/count;
-			System.out.println("---# > AVERAGE FOR STATION: " + station + "   ON DATE: " + date + " IS: " + avg);
+			System.out.println("---# > AVERAGE FOR STATION: " + p.getName() + "   ON DATE: " + date + " IS: " + avg);
 		}
 	}
 }
