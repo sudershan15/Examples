@@ -111,14 +111,13 @@ public class StationQueryTest {
 	}
 	
 	@Test
-	public void join1() {
+	public void averageTemperature() {
 		testQuery ppl = new testQuery();
 		int date = 20121005;
-		String station = "058AX";
+		String station = "DKRM8";
 		int time = 1215;
-		
+		int tot = 0, count = 0, avg = 0;
 		Station template = new Station();
-		
 		template.setId(station);
 		List<Station> list = ppl.findStation(template);
 		Assert.assertNotNull("List NULL!! :(", list);
@@ -127,9 +126,15 @@ public class StationQueryTest {
 			Collection<Wdata> i = p.getWdatas();
 			Iterator<Wdata> o = i.iterator();
 			while (o.hasNext()) {
-				
-				System.out.println("----> " + o.next().getTmpf() );
+				Wdata f = o.next();
+				if (f.getDate() == date) {
+					System.out.println("----> " + f.getTmpf() );
+					count++;
+					tot += f.getTmpf();
+				}
 			}
+			avg = tot/count;
+			System.out.println("---# > AVERAGE FOR STATION: " + station + "   ON DATE: " + date + " IS: " + avg);
 		}
 	}
 }
