@@ -1,6 +1,8 @@
 package drsy.weather.app;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 import junit.framework.Assert;
@@ -88,6 +90,7 @@ public class StationQueryTest {
 	}
 	
 	@Test
+	@Ignore
 	public void join() {
 		testQuery ppl = new testQuery();
 		int date = 20121005;
@@ -105,5 +108,28 @@ public class StationQueryTest {
 		list.get(0).getDate();
 		for (Wdata p : list)
 			System.out.println(p);
+	}
+	
+	@Test
+	public void join1() {
+		testQuery ppl = new testQuery();
+		int date = 20121005;
+		String station = "058AX";
+		int time = 1215;
+		
+		Station template = new Station();
+		
+		template.setId(station);
+		List<Station> list = ppl.findStation(template);
+		Assert.assertNotNull("List NULL!! :(", list);
+		System.out.println("\nfound " + list.size() + " results");
+		for (Station p : list) {
+			Collection<Wdata> i = p.getWdatas();
+			Iterator<Wdata> o = i.iterator();
+			while (o.hasNext()) {
+				
+				System.out.println("----> " + o.next().getTmpf() );
+			}
+		}
 	}
 }
