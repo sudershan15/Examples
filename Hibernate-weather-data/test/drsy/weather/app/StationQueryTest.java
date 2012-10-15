@@ -71,6 +71,7 @@ public class StationQueryTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testaverageTemp() {
 		WdataKey key = new WdataKey();
 		testQuery ppl = new testQuery();
@@ -84,5 +85,25 @@ public class StationQueryTest {
 		Assert.assertNotNull(list);
 		System.out.println("\nfound results" + list.size());
 		
+	}
+	
+	@Test
+	public void join() {
+		testQuery ppl = new testQuery();
+		int date = 20121005;
+		String station = "DKRM8";
+		int time = 1215;
+		
+		Wdata template = new Wdata();
+		
+		template.setStation(station);
+		template.setTime(time);
+		template.setDate(date);
+		List<Wdata> list = ppl.find(template);
+		Assert.assertNotNull("List NULL!! :(", list);
+		System.out.println("\nfound " + list.size() + " results");
+		list.get(0).getDate();
+		for (Wdata p : list)
+			System.out.println(p);
 	}
 }

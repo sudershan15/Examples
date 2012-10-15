@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.hibernate.Criteria;
+import org.hibernate.FetchMode;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -89,6 +90,54 @@ public class testQuery {
 		}
 		return r;
 	}
+	
+	public ArrayList<Wdata> find(Wdata template) {
+
+		ArrayList<Wdata> r = null;
+
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		try {
+			session.beginTransaction();
+
+			// since the data is being detached we must fetch eagerly
+			Criteria c = session.createCriteria(Wdata.class);
+			c.setFetchMode("station", FetchMode.JOIN);
+
+			if (template.getStation() != null) {
+				WdataKey key = new WdataKey();
+				key.setDate(template.getDate());
+				key.setStation(template.getStation());
+				key.setTime(template.getTime());
+				c.add(Restrictions.idEq(key));
+				c.setMaxResults(1);
+//			} else {
+//				if (template.getLastName() != null)
+//					c.add(Restrictions.like("firstname", template.getFirstName()));
+//
+//				if (template.getLastName() != null)
+//					c.add(Restrictions.like("lastname", template.getLastName()));
+//
+//				if (template.getRole() != null)
+//					c.add(Restrictions.like("role", template.getRole()));
+//
+//				if (template.getNickName() != null)
+//					c.add(Restrictions.like("nickname", template.getNickName()));
+			}
+
+			//System.out.println("find() " + c.toString());
+
+			// the join creates duplicate records - this will remove them
+			Set<Wdata> set = new LinkedHashSet<Wdata>(c.list());
+			r = new ArrayList<Wdata>(set);
+
+			session.getTransaction().commit();
+		} catch (RuntimeException e) {
+			session.getTransaction().rollback();
+			throw e;
+		}
+		return r;	
+	}
+
 	
 	public List<Wdata> find(float alti) {
 		if (alti == 0.0)
@@ -180,7 +229,7 @@ public class testQuery {
 		try {
 			session.beginTransaction();
 			//Station s = find(id);
-			Query query = session.createQuery("select new drsy.weather.app.Count(p.tmpf) from Wdata as p where p.station = :station and p.date = :date");
+			Query query = session.createQuery("select p.tmpf from Wdata as p where p.station = :station and p.date = :date");
 			query.setInteger("date", key.getDate());
 			query.setString("station", key.getStation());
 
