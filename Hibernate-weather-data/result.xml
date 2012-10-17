@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="SMALPANI-T420" name="drsy.weather.app.StationQueryTest" tests="1" time="0.228" timestamp="2012-10-17T21:41:26">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="eclipse.pdebuild.templates" value="/C:/eclipse/plugins/org.eclipse.pde.build_3.8.0.v20120523-1555/templates/" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Windows 7" />
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jre6\lib\resources.jar;C:\Program Files\Java\jre6\lib\rt.jar;C:\Program Files\Java\jre6\lib\sunrsasign.jar;C:\Program Files\Java\jre6\lib\jsse.jar;C:\Program Files\Java\jre6\lib\jce.jar;C:\Program Files\Java\jre6\lib\charsets.jar;C:\Program Files\Java\jre6\lib\modules\jdk.boot.jar;C:\Program Files\Java\jre6\classes" />
+    <property name="sun.desktop" value="windows" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.home" value="C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730" />
+    <property name="java.runtime.version" value="1.6.0_34-b04" />
+    <property name="user.name" value="smalpani" />
+    <property name="logging.jar" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\slf4j-log4j12-1.6.1.jar" />
+    <property name="build.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\classes" />
+    <property name="hibernate.dir" value="C:\hibernate-release-4.1.7.Final" />
+    <property name="ant.file.type.Hibernate using native api (hbm)" value="file" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jre6\bin" />
+    <property name="ant.project.default-target" value="build" />
+    <property name="ant.project.name" value="Hibernate using native api (hbm)" />
+    <property name="java.version" value="1.6.0_34" />
+    <property name="user.timezone" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jre6\lib\endorsed" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="\" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="50.0" />
+    <property name="ant.file.Hibernate using native api (hbm)" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\build.xml" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="C:\Program Files\Java\jre6" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="ant.file" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\build.xml" />
+    <property name="os.version" value="6.1" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.version" value="20.9-b04" />
+    <property name="user.variant" value="" />
+    <property name="ant.library.dir" value="C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="eclipse.pdebuild.scripts" value="/C:/eclipse/plugins/org.eclipse.pde.build_3.8.0.v20120523-1555/scripts/" />
+    <property name="user.home" value="C:\Users\smalpani" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="test.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\test" />
+    <property name="java.library.path" value="C:\Program Files\Java\jre6\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\windows;c:\windows\system32;c:\windows\system32\wbem;c:\program files\common files\microsoft shared\microsoft online services;c:\program files (x86)\common files\microsoft shared\microsoft online services;\windowspowershell\v1.0\;c:\program files (x86)\common files\ulead systems\mpeg;c:\program files (x86)\quicktime\qtsystem\;c:\program files (x86)\securecrt\;c:\program files\java\jdk1.6.0_34\bin;C:\apache-maven-3.0.4\bin;;." />
+    <property name="name" value="pim" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner drsy.weather.app.StationQueryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.xml crashfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junitvmwatcher2295788060691262322.properties propsfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junit2702381724970844288.properties" />
+    <property name="java.class.path" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\classes;C:\eclipse\plugins\org.junit_4.10.0.v4_10_0_v20120426-0900\junit.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\slf4j-log4j12-1.6.1.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\log4j-1.2.14.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\postgresql-9.0-801.jdbc4.jar;C:\hibernate-release-4.1.7.Final\ehcache-1.5.0.jar;C:\hibernate-release-4.1.7.Final\lib\required\antlr-2.7.7.jar;C:\hibernate-release-4.1.7.Final\lib\required\dom4j-1.6.1.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-commons-annotations-4.0.1.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-core-4.1.7.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\javassist-3.15.0-GA.jar;C:\hibernate-release-4.1.7.Final\lib\required\jboss-logging-3.1.0.GA.jar;C:\hibernate-release-4.1.7.Final\lib\required\jboss-transaction-api_1.1_spec-1.0.0.Final.jar;C:\hibernate-release-4.1.7.Final\lib\jpa\hibernate-entitymanager-4.1.7.Final.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-launcher.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="junit.jar" value="C:\eclipse\plugins\org.junit_4.10.0.v4_10_0_v20120426-0900\junit.jar" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.os.patch.level" value="Service Pack 1" />
+    <property name="eclipse.pdebuild.home" value="/C:/eclipse/plugins/org.eclipse.pde.build_3.8.0.v20120523-1555/./" />
+    <property name="java.io.tmpdir" value="C:\Users\smalpani\AppData\Local\Temp\" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="os.arch" value="amd64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jre6\lib\ext;C:\Windows\Sun\Java\lib\ext" />
+    <property name="user.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="config.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\resources" />
+    <property name="ant.core.lib" value="C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="src.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\src" />
+    <property name="ant.project.invoked-targets" value="build,init,clean,build.test,test.query" />
+  </properties>
+  <testcase classname="drsy.weather.app.StationQueryTest" name="initializationError" time="0.021">
+    <error message="org/hamcrest/SelfDescribing" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClassCond(Unknown Source)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$000(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+Caused by: java.lang.ClassNotFoundException: org.hamcrest.SelfDescribing
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+</error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
