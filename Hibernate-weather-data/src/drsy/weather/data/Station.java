@@ -119,4 +119,19 @@ public class Station {
 	public Station() {
 		sskey = new StationState();
 	}
+	public String getState() {
+		return sskey.getState();
+	}
+
+	public void setState(String state) {
+		sskey.state = state;
+	}
+
+	public String getCountry() {
+		return sskey.getCountry();
+	}
+
+	public void setCountry(String country) {
+		sskey.country = country;
+	}
 }

@@ -111,11 +111,11 @@ public class StationQueryTest {
 	}
 	
 	@Test
-	public void averageTemperature() {
+	//@Ignore
+	public void averageTemperatureStates() {
 		testQuery ppl = new testQuery();
 		int date = 20121005;
 		String station = "DKRM8";
-		int time = 1215;
 		int tot = 0, count = 0;
 		float avg = 0;
 		Station template = new Station();
@@ -136,6 +136,60 @@ public class StationQueryTest {
 			}
 			avg = tot/count;
 			System.out.println("---# > AVERAGE FOR STATION: " + p.getName() + "   ON DATE: " + date + " IS: " + avg);
+		}
+		
+		
+	}
+	
+	@Test
+	public void averageTemperatures() {
+		testQuery ppl = new testQuery();
+		int date = 20121003;
+		List<Station> list = ppl.queryfour(date);
+		Assert.assertNotNull("List NULL!! :(", list);
+		System.out.println("\nfound " + list.size() + " results" + list);
+		for (Station p : list) {
+			int tot = 0, count = 0;
+			float avg = 0;
+			Collection<Wdata> l = p.getWdatas();
+			Iterator<Wdata> i = l.iterator();
+			while (i.hasNext()) {
+				Wdata o = i.next();
+				count++;
+				tot += o.getTmpf();
+			}
+			avg = tot/count;
+			System.out.println("---# > AVERAGE FOR STATE: " + p.getState() + "   ON DATE: " + date + " IS: " + avg);
+		}
+	}
+	
+	@Test
+	public void countStationsNotUS() {
+		testQuery ppl = new testQuery();
+		List<Station> list = ppl.countStation();
+		Assert.assertNotNull("List NULL!! :(", list);
+		System.out.println("\nfound " + list.size() + " results");
+	}
+	
+	@Test
+	public void minimumTemperatures() {
+		testQuery ppl = new testQuery();
+		int date = 20121003;
+		List<Station> list = ppl.queryfour(date);
+		Assert.assertNotNull("List NULL!! :(", list);
+		System.out.println("\nfound " + list.size() + " results" + list);
+		for (Station p : list) {
+			float count = 0;
+			Collection<Wdata> l = p.getWdatas();
+			Iterator<Wdata> i = l.iterator();
+			while (i.hasNext()) {
+				Wdata o = i.next();
+				count = o.getTmpf();
+				if(o.getTmpf() < count && o.getTmpf() > -99) {
+					count = o.getTmpf();
+				}
+			}
+			System.out.println("---# > MINIMUM FOR STATE: " + p.getState() + "   ON DATE: " + date + " IS: " + count);
 		}
 	}
 }

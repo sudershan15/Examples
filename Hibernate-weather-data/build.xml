@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
+
+
 <project name="Hibernate using native api (hbm)" basedir="." default="build">
 
 	<target name="init">
+		
 		<property name="name" value="pim" />
 		<property name="src.dir" location="${basedir}/src" />
 		<property name="test.dir" location="${basedir}/test" />
@@ -9,7 +12,7 @@
 
 		<property name="config.dir" location="${basedir}/resources" />
 		<property name="hibernate.dir" location="C:\hibernate-release-4.1.7.Final" />
-		<property name="junit.jar" location="/Users/gash/Developer/junit-4.8.2.jar" />
+		<property name="junit.jar" location="C:\eclipse\plugins\org.junit_4.10.0.v4_10_0_v20120426-0900\junit.jar" />
 		<property name="logging.jar" location="${basedir}/lib/slf4j-log4j12-1.6.1.jar" />
 
 		<path id="project.classpath">
@@ -64,7 +67,7 @@
 
 			<formatter type="plain" />
 
-			<test name="gash.hibernate.app.CountryQueryTest" haltonfailure="no" outfile="result">
+			<test name="drsy.weather.app.StationQueryTest" haltonfailure="no" outfile="result">
 				<formatter type="xml" />
 			</test>
 
