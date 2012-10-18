@@ -62,7 +62,7 @@
 	</target>
 
 	<target name="test.query" depends="build.test">
-		<junit printsummary='yes' fork='no'>
+		<junit printsummary='yes' fork='yes'>
 			<classpath refid="project.classpath" />
 
 			<formatter type="plain" />
