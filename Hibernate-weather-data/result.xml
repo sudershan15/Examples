@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="7" failures="0" hostname="SMALPANI-T420" name="drsy.weather.app.StationQueryTest" tests="7" time="1.347" timestamp="2012-10-18T01:33:31">
+<testsuite errors="0" failures="0" hostname="SMALPANI-T420" name="drsy.weather.app.StationQueryTest" tests="7" time="21.983" timestamp="2012-10-18T01:36:24">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -52,7 +52,7 @@
     <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="java.vm.vendor" value="Sun Microsystems Inc." />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner drsy.weather.app.StationQueryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.xml crashfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junitvmwatcher4054824159945143143.properties propsfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junit9062244301989982770.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner drsy.weather.app.StationQueryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.xml crashfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junitvmwatcher6969131138702098455.properties propsfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junit293930839295685375.properties" />
     <property name="java.class.path" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\classes;C:\eclipse\plugins\org.junit_4.10.0.v4_10_0_v20120426-0900\junit.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\slf4j-log4j12-1.6.1.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\hamcrest-all-1.3.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\log4j-1.2.14.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\postgresql-9.0-801.jdbc4.jar;C:\hibernate-release-4.1.7.Final\ehcache-1.5.0.jar;C:\hibernate-release-4.1.7.Final\lib\required\antlr-2.7.7.jar;C:\hibernate-release-4.1.7.Final\lib\required\dom4j-1.6.1.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-commons-annotations-4.0.1.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-core-4.1.7.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\javassist-3.15.0-GA.jar;C:\hibernate-release-4.1.7.Final\lib\required\jboss-logging-3.1.0.GA.jar;C:\hibernate-release-4.1.7.Final\lib\required\jboss-transaction-api_1.1_spec-1.0.0.Final.jar;C:\hibernate-release-4.1.7.Final\lib\jpa\hibernate-entitymanager-4.1.7.Final.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-launcher.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -78,85 +78,87 @@
     <property name="src.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\src" />
     <property name="ant.project.invoked-targets" value="build,init,clean,build.test,test.query" />
   </properties>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="testCriteria" time="1.082">
-    <error type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
-	at drsy.weather.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:17)
-	at drsy.weather.util.HibernateUtil.&lt;clinit&gt;(HibernateUtil.java:8)
-	at drsy.weather.app.testQuery.find(testQuery.java:284)
-	at drsy.weather.app.StationQueryTest.testCriteria(StationQueryTest.java:32)
-Caused by: org.hibernate.MappingException: Unable to load class [ gash.hibernate.data.Person] declared in Hibernate configuration &lt;mapping/&gt; entry
-	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2139)
-	at org.hibernate.cfg.Configuration.parseSessionFactory(Configuration.java:2087)
-	at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:2067)
-	at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:2020)
-	at org.hibernate.cfg.Configuration.configure(Configuration.java:1935)
-	at org.hibernate.cfg.Configuration.configure(Configuration.java:1914)
-	at drsy.weather.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:13)
-Caused by: java.lang.ClassNotFoundException: gash.hibernate.data.Person
-	at java.net.URLClassLoader$1.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at java.lang.Class.forName0(Native Method)
-	at java.lang.Class.forName(Unknown Source)
-	at org.hibernate.internal.util.ReflectHelper.classForName(ReflectHelper.java:192)
-	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2136)
-</error>
-  </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="testQueryHQL" time="0.0040">
-    <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
-	at drsy.weather.app.testQuery.find(testQuery.java:36)
-	at drsy.weather.app.StationQueryTest.testQueryHQL(StationQueryTest.java:42)
-</error>
-  </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="testWdatakey" time="0.0060">
-    <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
-	at drsy.weather.app.testQuery.find(testQuery.java:82)
-	at drsy.weather.app.StationQueryTest.testWdatakey(StationQueryTest.java:69)
-</error>
-  </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="averageTemperatureStates" time="0.0060">
-    <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
-	at drsy.weather.app.testQuery.findStation(testQuery.java:135)
-	at drsy.weather.app.StationQueryTest.averageTemperatureStates(StationQueryTest.java:123)
-</error>
-  </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="averageTemperatures" time="0.0060">
-    <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
-	at drsy.weather.app.testQuery.queryfour(testQuery.java:190)
-	at drsy.weather.app.StationQueryTest.averageTemperatures(StationQueryTest.java:148)
-</error>
-  </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="countStationsNotUS" time="0.0060">
-    <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
-	at drsy.weather.app.testQuery.countStation(testQuery.java:165)
-	at drsy.weather.app.StationQueryTest.countStationsNotUS(StationQueryTest.java:169)
-</error>
-  </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="minimumTemperatures" time="0.0060">
-    <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
-	at drsy.weather.app.testQuery.queryfour(testQuery.java:190)
-	at drsy.weather.app.StationQueryTest.minimumTemperatures(StationQueryTest.java:178)
-</error>
-  </testcase>
+  <testcase classname="drsy.weather.app.StationQueryTest" name="testCriteria" time="5.366" />
+  <testcase classname="drsy.weather.app.StationQueryTest" name="testQueryHQL" time="0.021" />
+  <testcase classname="drsy.weather.app.StationQueryTest" name="testWdatakey" time="0.012" />
+  <testcase classname="drsy.weather.app.StationQueryTest" name="averageTemperatureStates" time="0.205" />
+  <testcase classname="drsy.weather.app.StationQueryTest" name="averageTemperatures" time="0.973" />
+  <testcase classname="drsy.weather.app.StationQueryTest" name="countStationsNotUS" time="14.062" />
+  <testcase classname="drsy.weather.app.StationQueryTest" name="minimumTemperatures" time="1.124" />
   <system-out><![CDATA[
 -----------------------------------------------------
-18:33:32,188 DEBUG logging:176 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+18:36:24,895 DEBUG logging:176 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+18:36:26,506  WARN RootClass:288 - HHH000038: Composite-id class does not override equals(): drsy.weather.data.WdataKey
+18:36:26,507  WARN RootClass:289 - HHH000039: Composite-id class does not override hashCode(): drsy.weather.data.WdataKey
+18:36:26,509  WARN RootClass:288 - HHH000038: Composite-id class does not override equals(): drsy.weather.data.StateId
+18:36:26,511  WARN RootClass:289 - HHH000039: Composite-id class does not override hashCode(): drsy.weather.data.StateId
+18:36:28,814  INFO SchemaValidator:137 - HHH000229: Running schema validator
+18:36:28,815  INFO SchemaValidator:145 - HHH000102: Fetching database metadata
+18:36:28,869  INFO TableMetadata:65 - HHH000261: Table found: public.country
+18:36:28,870  INFO TableMetadata:66 - HHH000037: Columns: [id, name]
+18:36:28,903  INFO TableMetadata:65 - HHH000261: Table found: public.network
+18:36:28,905  INFO TableMetadata:66 - HHH000037: Columns: [id, name]
+18:36:28,933  INFO TableMetadata:65 - HHH000261: Table found: public.param
+18:36:28,935  INFO TableMetadata:66 - HHH000037: Columns: [id, eunits, descrip, munits]
+18:36:28,960  INFO TableMetadata:65 - HHH000261: Table found: public.state
+18:36:28,962  INFO TableMetadata:66 - HHH000037: Columns: [id, name, country_id]
+18:36:28,991  INFO TableMetadata:65 - HHH000261: Table found: public.station
+18:36:28,993  INFO TableMetadata:66 - HHH000037: Columns: [id, sec_id, status, elevation, name, state, longitude, latitude, network, country]
+18:36:29,030  INFO TableMetadata:65 - HHH000261: Table found: public.wdata
+18:36:29,031  INFO TableMetadata:66 - HHH000037: Columns: [gust, station, elev, drct, dwpf, date, long, network, relh, time, p24i, wthr, alti, tmpf, sknt, pmsl, lat]
+Hibernate: select this_.id as id4_1_, this_.elevation as elevation4_1_, this_.latitude as latitude4_1_, this_.longitude as longitude4_1_, this_.name as name4_1_, this_.network as network4_1_, this_.sec_id as sec7_4_1_, this_.country as country4_1_, this_.state as state4_1_, this_.status as status4_1_, wdatas2_.station as station4_3_, wdatas2_.date as date5_3_, wdatas2_.station as station5_3_, wdatas2_.time as time5_3_, wdatas2_.date as date5_0_, wdatas2_.station as station5_0_, wdatas2_.time as time5_0_, wdatas2_.alti as alti5_0_, wdatas2_.drct as drct5_0_, wdatas2_.dwpf as dwpf5_0_, wdatas2_.gust as gust5_0_, wdatas2_.network as network5_0_, wdatas2_.p24i as p9_5_0_, wdatas2_.pmsl as pmsl5_0_, wdatas2_.relh as relh5_0_, wdatas2_.sknt as sknt5_0_, wdatas2_.tmpf as tmpf5_0_, wdatas2_.wthr as wthr5_0_ from station this_ left outer join wdata wdatas2_ on this_.id=wdatas2_.station where this_.id = ? limit ?
+
+found 1 results
+drsy.weather.data.Station@7619cc1b
 
 -----------------------------------------------------
+Hibernate: select network0_.id as id1_0_, network0_.name as name1_0_ from network network0_ where network0_.id=?
+ARL SORD
 
 -----------------------------------------------------
+Hibernate: select wdata0_.date as date5_0_, wdata0_.station as station5_0_, wdata0_.time as time5_0_, wdata0_.alti as alti5_0_, wdata0_.drct as drct5_0_, wdata0_.dwpf as dwpf5_0_, wdata0_.gust as gust5_0_, wdata0_.network as network5_0_, wdata0_.p24i as p9_5_0_, wdata0_.pmsl as pmsl5_0_, wdata0_.relh as relh5_0_, wdata0_.sknt as sknt5_0_, wdata0_.tmpf as tmpf5_0_, wdata0_.wthr as wthr5_0_ from wdata wdata0_ where wdata0_.date=? and wdata0_.station=? and wdata0_.time=?
+
+found results
+106    DKRM8
 
 -----------------------------------------------------
+Hibernate: select this_.id as id4_1_, this_.elevation as elevation4_1_, this_.latitude as latitude4_1_, this_.longitude as longitude4_1_, this_.name as name4_1_, this_.network as network4_1_, this_.sec_id as sec7_4_1_, this_.country as country4_1_, this_.state as state4_1_, this_.status as status4_1_, wdatas2_.station as station4_3_, wdatas2_.date as date5_3_, wdatas2_.station as station5_3_, wdatas2_.time as time5_3_, wdatas2_.date as date5_0_, wdatas2_.station as station5_0_, wdatas2_.time as time5_0_, wdatas2_.alti as alti5_0_, wdatas2_.drct as drct5_0_, wdatas2_.dwpf as dwpf5_0_, wdatas2_.gust as gust5_0_, wdatas2_.network as network5_0_, wdatas2_.p24i as p9_5_0_, wdatas2_.pmsl as pmsl5_0_, wdatas2_.relh as relh5_0_, wdatas2_.sknt as sknt5_0_, wdatas2_.tmpf as tmpf5_0_, wdatas2_.wthr as wthr5_0_ from station this_ left outer join wdata wdatas2_ on this_.id=wdatas2_.station where this_.id = ?
+
+found 1 results
+----> 35.5
+----> 35.4
+----> 34.6
+----> 33.9
+----> 34.1
+----> 34.4
+----> 33.8
+----> 33.8
+---# > AVERAGE FOR STATION: TONGUE RVR AT TONGUE RVR DAM NEAR DECKER 8NE   ON DATE: 20121005 IS: 33.0
 
 -----------------------------------------------------
+Hibernate: select this_.id as id4_1_, this_.elevation as elevation4_1_, this_.latitude as latitude4_1_, this_.longitude as longitude4_1_, this_.name as name4_1_, this_.network as network4_1_, this_.sec_id as sec7_4_1_, this_.country as country4_1_, this_.state as state4_1_, this_.status as status4_1_, wdatas2_.station as station4_3_, wdatas2_.date as date5_3_, wdatas2_.station as station5_3_, wdatas2_.time as time5_3_, wdatas2_.date as date5_0_, wdatas2_.station as station5_0_, wdatas2_.time as time5_0_, wdatas2_.alti as alti5_0_, wdatas2_.drct as drct5_0_, wdatas2_.dwpf as dwpf5_0_, wdatas2_.gust as gust5_0_, wdatas2_.network as network5_0_, wdatas2_.p24i as p9_5_0_, wdatas2_.pmsl as pmsl5_0_, wdatas2_.relh as relh5_0_, wdatas2_.sknt as sknt5_0_, wdatas2_.tmpf as tmpf5_0_, wdatas2_.wthr as wthr5_0_ from station this_ left outer join wdata wdatas2_ on this_.id=wdatas2_.station where wdatas2_.date = 20121003
+
+found 5 results[drsy.weather.data.Station@4e0a2a38, drsy.weather.data.Station@63fb050c, drsy.weather.data.Station@3a32ea4, drsy.weather.data.Station@22c28cb7, drsy.weather.data.Station@31a734ff]
+---# > AVERAGE FOR STATE: VA   ON DATE: 20121003 IS: 81.0
+---# > AVERAGE FOR STATE: UT   ON DATE: 20121003 IS: 49.0
+---# > AVERAGE FOR STATE: NM   ON DATE: 20121003 IS: 90.0
+---# > AVERAGE FOR STATE: OR   ON DATE: 20121003 IS: 43.0
+---# > AVERAGE FOR STATE: UT   ON DATE: 20121003 IS: 47.0
 
 -----------------------------------------------------
+Hibernate: select this_.id as id4_1_, this_.elevation as elevation4_1_, this_.latitude as latitude4_1_, this_.longitude as longitude4_1_, this_.name as name4_1_, this_.network as network4_1_, this_.sec_id as sec7_4_1_, this_.country as country4_1_, this_.state as state4_1_, this_.status as status4_1_, wdatas2_.station as station4_3_, wdatas2_.date as date5_3_, wdatas2_.station as station5_3_, wdatas2_.time as time5_3_, wdatas2_.date as date5_0_, wdatas2_.station as station5_0_, wdatas2_.time as time5_0_, wdatas2_.alti as alti5_0_, wdatas2_.drct as drct5_0_, wdatas2_.dwpf as dwpf5_0_, wdatas2_.gust as gust5_0_, wdatas2_.network as network5_0_, wdatas2_.p24i as p9_5_0_, wdatas2_.pmsl as pmsl5_0_, wdatas2_.relh as relh5_0_, wdatas2_.sknt as sknt5_0_, wdatas2_.tmpf as tmpf5_0_, wdatas2_.wthr as wthr5_0_ from station this_ left outer join wdata wdatas2_ on this_.id=wdatas2_.station where this_.country<>?
+
+found 2247 results
 
 -----------------------------------------------------
+Hibernate: select this_.id as id4_1_, this_.elevation as elevation4_1_, this_.latitude as latitude4_1_, this_.longitude as longitude4_1_, this_.name as name4_1_, this_.network as network4_1_, this_.sec_id as sec7_4_1_, this_.country as country4_1_, this_.state as state4_1_, this_.status as status4_1_, wdatas2_.station as station4_3_, wdatas2_.date as date5_3_, wdatas2_.station as station5_3_, wdatas2_.time as time5_3_, wdatas2_.date as date5_0_, wdatas2_.station as station5_0_, wdatas2_.time as time5_0_, wdatas2_.alti as alti5_0_, wdatas2_.drct as drct5_0_, wdatas2_.dwpf as dwpf5_0_, wdatas2_.gust as gust5_0_, wdatas2_.network as network5_0_, wdatas2_.p24i as p9_5_0_, wdatas2_.pmsl as pmsl5_0_, wdatas2_.relh as relh5_0_, wdatas2_.sknt as sknt5_0_, wdatas2_.tmpf as tmpf5_0_, wdatas2_.wthr as wthr5_0_ from station this_ left outer join wdata wdatas2_ on this_.id=wdatas2_.station where wdatas2_.date = 20121003
+
+found 5 results[drsy.weather.data.Station@1466f971, drsy.weather.data.Station@3a12dea3, drsy.weather.data.Station@461a1391, drsy.weather.data.Station@5b69dbd3, drsy.weather.data.Station@74f62f97]
+---# > MINIMUM FOR STATE: VA   ON DATE: 20121003 IS: 81.16
+---# > MINIMUM FOR STATE: UT   ON DATE: 20121003 IS: 49.0
+---# > MINIMUM FOR STATE: NM   ON DATE: 20121003 IS: 90.9
+---# > MINIMUM FOR STATE: OR   ON DATE: 20121003 IS: 59.0
+---# > MINIMUM FOR STATE: UT   ON DATE: 20121003 IS: 55.1
 ]]></system-out>
-  <system-err><![CDATA[Initial SessionFactory creation failed.org.hibernate.MappingException: Unable to load class [ gash.hibernate.data.Person] declared in Hibernate configuration <mapping/> entry
-]]></system-err>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
