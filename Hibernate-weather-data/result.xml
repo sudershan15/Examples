@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="7" failures="0" hostname="SMALPANI-T420" name="drsy.weather.app.StationQueryTest" tests="7" time="1.558" timestamp="2012-10-18T01:30:48">
+<testsuite errors="7" failures="0" hostname="SMALPANI-T420" name="drsy.weather.app.StationQueryTest" tests="7" time="1.347" timestamp="2012-10-18T01:33:31">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc." />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -52,7 +52,7 @@
     <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="java.vm.vendor" value="Sun Microsystems Inc." />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner drsy.weather.app.StationQueryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.xml crashfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junitvmwatcher685015102092461740.properties propsfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junit9158622069338984019.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner drsy.weather.app.StationQueryTest filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.PlainJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.txt formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\result.xml crashfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junitvmwatcher4054824159945143143.properties propsfile=C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\junit9062244301989982770.properties" />
     <property name="java.class.path" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\classes;C:\eclipse\plugins\org.junit_4.10.0.v4_10_0_v20120426-0900\junit.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\slf4j-log4j12-1.6.1.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\hamcrest-all-1.3.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\log4j-1.2.14.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\lib\postgresql-9.0-801.jdbc4.jar;C:\hibernate-release-4.1.7.Final\ehcache-1.5.0.jar;C:\hibernate-release-4.1.7.Final\lib\required\antlr-2.7.7.jar;C:\hibernate-release-4.1.7.Final\lib\required\dom4j-1.6.1.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-commons-annotations-4.0.1.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-core-4.1.7.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\hibernate-release-4.1.7.Final\lib\required\javassist-3.15.0-GA.jar;C:\hibernate-release-4.1.7.Final\lib\required\jboss-logging-3.1.0.GA.jar;C:\hibernate-release-4.1.7.Final\lib\required\jboss-transaction-api_1.1_spec-1.0.0.Final.jar;C:\hibernate-release-4.1.7.Final\lib\jpa\hibernate-entitymanager-4.1.7.Final.jar;C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data;C:\Program Files (x86)\Java\jre6\lib\ext\QTJava.zip;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-launcher.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit.jar;C:\eclipse\plugins\org.apache.ant_1.8.3.v20120321-1730\lib\ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.3 compiled on February 26 2012" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
@@ -78,7 +78,7 @@
     <property name="src.dir" value="C:\Users\smalpani\Desktop\Projects\Hibernate-weather-data\src" />
     <property name="ant.project.invoked-targets" value="build,init,clean,build.test,test.query" />
   </properties>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="testCriteria" time="1.259">
+  <testcase classname="drsy.weather.app.StationQueryTest" name="testCriteria" time="1.082">
     <error type="java.lang.ExceptionInInitializerError">java.lang.ExceptionInInitializerError
 	at drsy.weather.util.HibernateUtil.buildSessionFactory(HibernateUtil.java:17)
 	at drsy.weather.util.HibernateUtil.&lt;clinit&gt;(HibernateUtil.java:8)
@@ -105,13 +105,13 @@ Caused by: java.lang.ClassNotFoundException: gash.hibernate.data.Person
 	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2136)
 </error>
   </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="testQueryHQL" time="0.0070">
+  <testcase classname="drsy.weather.app.StationQueryTest" name="testQueryHQL" time="0.0040">
     <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
 	at drsy.weather.app.testQuery.find(testQuery.java:36)
 	at drsy.weather.app.StationQueryTest.testQueryHQL(StationQueryTest.java:42)
 </error>
   </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="testWdatakey" time="0.0080">
+  <testcase classname="drsy.weather.app.StationQueryTest" name="testWdatakey" time="0.0060">
     <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
 	at drsy.weather.app.testQuery.find(testQuery.java:82)
 	at drsy.weather.app.StationQueryTest.testWdatakey(StationQueryTest.java:69)
@@ -129,13 +129,13 @@ Caused by: java.lang.ClassNotFoundException: gash.hibernate.data.Person
 	at drsy.weather.app.StationQueryTest.averageTemperatures(StationQueryTest.java:148)
 </error>
   </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="countStationsNotUS" time="0.0050">
+  <testcase classname="drsy.weather.app.StationQueryTest" name="countStationsNotUS" time="0.0060">
     <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
 	at drsy.weather.app.testQuery.countStation(testQuery.java:165)
 	at drsy.weather.app.StationQueryTest.countStationsNotUS(StationQueryTest.java:169)
 </error>
   </testcase>
-  <testcase classname="drsy.weather.app.StationQueryTest" name="minimumTemperatures" time="0.0040">
+  <testcase classname="drsy.weather.app.StationQueryTest" name="minimumTemperatures" time="0.0060">
     <error message="Could not initialize class drsy.weather.util.HibernateUtil" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
 	at drsy.weather.app.testQuery.queryfour(testQuery.java:190)
 	at drsy.weather.app.StationQueryTest.minimumTemperatures(StationQueryTest.java:178)
@@ -143,7 +143,7 @@ Caused by: java.lang.ClassNotFoundException: gash.hibernate.data.Person
   </testcase>
   <system-out><![CDATA[
 -----------------------------------------------------
-18:30:48,906 DEBUG logging:176 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+18:33:32,188 DEBUG logging:176 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 
 -----------------------------------------------------
 

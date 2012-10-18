@@ -1,9 +1,9 @@
 Testsuite: drsy.weather.app.StationQueryTest
-Tests run: 7, Failures: 0, Errors: 7, Time elapsed: 1.558 sec
+Tests run: 7, Failures: 0, Errors: 7, Time elapsed: 1.347 sec
 ------------- Standard Output ---------------
 
 -----------------------------------------------------
-18:30:48,906 DEBUG logging:176 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+18:33:32,188 DEBUG logging:176 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
 
 -----------------------------------------------------
 
@@ -21,7 +21,7 @@ Tests run: 7, Failures: 0, Errors: 7, Time elapsed: 1.558 sec
 Initial SessionFactory creation failed.org.hibernate.MappingException: Unable to load class [ gash.hibernate.data.Person] declared in Hibernate configuration <mapping/> entry
 ------------- ---------------- ---------------
 
-Testcase: testCriteria took 1.241 sec
+Testcase: testCriteria took 1.067 sec
 	Caused an ERROR
 null
 java.lang.ExceptionInInitializerError
@@ -49,7 +49,7 @@ Caused by: java.lang.ClassNotFoundException: gash.hibernate.data.Person
 	at org.hibernate.internal.util.ReflectHelper.classForName(ReflectHelper.java:192)
 	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2136)
 
-Testcase: testQueryHQL took 0.001 sec
+Testcase: testQueryHQL took 0 sec
 	Caused an ERROR
 Could not initialize class drsy.weather.util.HibernateUtil
 java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
@@ -63,14 +63,14 @@ java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.Hib
 	at drsy.weather.app.testQuery.find(testQuery.java:82)
 	at drsy.weather.app.StationQueryTest.testWdatakey(StationQueryTest.java:69)
 
-Testcase: averageTemperatureStates took 0.001 sec
+Testcase: averageTemperatureStates took 0 sec
 	Caused an ERROR
 Could not initialize class drsy.weather.util.HibernateUtil
 java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil
 	at drsy.weather.app.testQuery.findStation(testQuery.java:135)
 	at drsy.weather.app.StationQueryTest.averageTemperatureStates(StationQueryTest.java:123)
 
-Testcase: averageTemperatures took 0.001 sec
+Testcase: averageTemperatures took 0 sec
 	Caused an ERROR
 Could not initialize class drsy.weather.util.HibernateUtil
 java.lang.NoClassDefFoundError: Could not initialize class drsy.weather.util.HibernateUtil

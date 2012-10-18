@@ -74,7 +74,7 @@
 		</junit>
 	</target>
 
-	<target name="test.cache" depends="build.test">
+	<!--<target name="test.cache" depends="build.test">
 		<junit printsummary='yes' fork='yes' maxmemory="4096m">
 			<classpath refid="project.classpath" />
 
@@ -85,7 +85,7 @@
 			</test>
 
 		</junit>
-	</target>
+	</target>-->
 
 	<target name="demo" depends="build">
 		<java fork="yes" classname="hibernate.SimpleApp">
@@ -93,10 +93,10 @@
 		</java>
 	</target>
 
-	<target name="load" depends="build">
+	<!--<target name="load" depends="build">
 		<java fork="yes" classname="gash.hibernate.app.Populate">
 			<classpath refid="project.classpath" />
 		</java>
 	</target>
-
+-->
 </project>
