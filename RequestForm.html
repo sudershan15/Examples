@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Branch Request Form</title>
+	<script language = javascript>
+		var counttblSample=1;
+		var counttblDocumentationLocal=1;
+		var counttblDocumentationExternal=1;
+		var counttblOpenSrc=1;
+		var counttblOpenSrcMod=1;
+		var counttblOpenSrcAttributions=1;
+		var countemail=0;
+		arr = new Array("JunosV","DX","genmake","IDP","Junos AppBalancer","JUNOS(SLT)","MCM","MSG","NSM","NSMXpress","Pulse","PulseMobile","ScreenOS","SD","STRM","UAC","SA","Space","Space SDK","Virtual Control","vGW","Web Posting","WX","Carrier - AAA");
+		function addRowToTabletblDocumentationExternal()
+		{
+			++counttblDocumentationExternal;
+			var tbl = document.getElementById('tblDocumentationExternal');
+			var lastRow = tbl.rows.length;
+			var iteration = lastRow-1;
+			var row = tbl.insertRow(lastRow);
+			var cellRight = row.insertCell(0);
+
+			var el = document.createElement('input');
+			el.setAttribute('type', 'text');
+			el.setAttribute('id', 'docextlabel' + iteration);
+			el.setAttribute('size', '40');
+			cellRight.appendChild(el);
+
+			var cell = row.insertCell(1);
+			var e2 = document.createElement('input');
+			e2.setAttribute('type', 'text');
+			e2.setAttribute('id', 'docextpath' + iteration);
+			e2.setAttribute('size', '40');
+			cell.appendChild(e2);
+
+			var cell = row.insertCell(2);
+			var e3 = document.createElement('input');
+			e3.setAttribute('type', 'text');
+			e3.setAttribute('id', 'docextblock' + iteration);
+			e3.setAttribute('size', '40');
+			cell.appendChild(e3);
+
+			var cell = row.insertCell(3);
+			var e4 = document.createElement('input');
+			e4.setAttribute('type', 'text');
+			e4.setAttribute('id', 'docextdesc' + iteration);
+			e4.setAttribute('size', '40');
+			cell.appendChild(e4);
+		}
+
+		function removeRowFromTabletblDocumentationExternal()
+		{
+			var tbl = document.getElementById('tblDocumentationExternal');
+			var lastRow = tbl.rows.length;
+			--counttblDocumentationExternal;
+			if (lastRow > 3) tbl.deleteRow(lastRow - 1);
+		}
+
+		function addRowToTabletblDocumentationLocal()
+		{
+			++counttblDocumentationLocal;
+			var tbl = document.getElementById('tblDocumentationLocal');
+			var lastRow = tbl.rows.length;
+			var iteration = lastRow-1;
+			var row = tbl.insertRow(lastRow);
+			var cellRight = row.insertCell(0);
+
+			var el = document.createElement('input');
+			el.setAttribute('type', 'text');
+			el.setAttribute('id', 'docloclabel' + iteration);
+			el.setAttribute('size', '40');
+			cellRight.appendChild(el);
+
+			var cell = row.insertCell(1);
+			var e2 = document.createElement('input');
+			e2.setAttribute('type', 'text');
+			e2.setAttribute('id', 'doclocpath' + iteration);
+			e2.setAttribute('size', '40');
+			cell.appendChild(e2);
+
+			var cell = row.insertCell(2);
+			var e3 = document.createElement('input');
+			e3.setAttribute('type', 'text');
+			e3.setAttribute('id', 'doclocblock' + iteration);
+			e3.setAttribute('size', '40');
+			cell.appendChild(e3);
+
+			var cell = row.insertCell(3);
+			var e4 = document.createElement('input');
+			e4.setAttribute('type', 'text');
+			e4.setAttribute('id', 'doclocdesc' + iteration);
+			e4.setAttribute('size', '40');
+			cell.appendChild(e4);
+		}
+
+		function removeRowFromTabletblDocumentationLocal()
+		{
+			var tbl = document.getElementById('tblDocumentationLocal');
+			var lastRow = tbl.rows.length;
+			--counttblDocumentationLocal;
+			if (lastRow > 3) tbl.deleteRow(lastRow - 1);
+		}
+
+		function addRowToTabletblSample()
+		{
+			++counttblSample;
+			var tbl = document.getElementById('tblSample');
+			var lastRow = tbl.rows.length;
+			var iteration = lastRow-1;
+			var row = tbl.insertRow(lastRow);
+			var cellRight = row.insertCell(0);
+
+			var el = document.createElement('input');
+			el.setAttribute('type', 'text');
+			el.setAttribute('id', 'primglabel' + iteration);
+			el.setAttribute('size', '40');
+			cellRight.appendChild(el);
+
+			var cell = row.insertCell(1);
+			var e2 = document.createElement('input');
+			e2.setAttribute('type', 'text');
+			e2.setAttribute('id', 'primgpath' + iteration);
+			e2.setAttribute('size', '40');
+			cell.appendChild(e2);
+
+			var cell = row.insertCell(2);
+			var e3 = document.createElement('input');
+			e3.setAttribute('type', 'text');
+			e3.setAttribute('id', 'primgblock' + iteration);
+			e3.setAttribute('size', '40');
+			cell.appendChild(e3);
+
+			var cell = row.insertCell(3);
+			var e4 = document.createElement('input');
+			e4.setAttribute('type', 'text');
+			e4.setAttribute('id', 'primgdesc' + iteration);
+			e4.setAttribute('size', '40');
+			cell.appendChild(e4);
+		}
+
+		function removeRowFromTabletblSample()
+		{
+			var tbl = document.getElementById('tblSample');
+			var lastRow = tbl.rows.length;
+			--counttblSample;
+			if (lastRow > 3) tbl.deleteRow(lastRow - 1);
+		}
+
+		function addRowToTabletblOpenSrc()
+		{
+			++counttblOpenSrc;
+			var tbl = document.getElementById('tblOpenSrc');
+			var lastRow = tbl.rows.length;
+			// if there's no header row in the table, then iteration = lastRow + 1
+			var iteration = lastRow-1;
+			var row = tbl.insertRow(lastRow);
+
+			var cellRight = row.insertCell(0);
+			var el = document.createElement('input');
+			el.setAttribute('type', 'text');
+			el.setAttribute('id', 'opsslabel' + iteration);
+			el.setAttribute('size', '40');
+			cellRight.appendChild(el);
+
+			var cell = row.insertCell(1);
+			var e2 = document.createElement('input');
+			e2.setAttribute('type', 'text');
+			e2.setAttribute('id', 'opsspath' + iteration);
+			e2.setAttribute('size', '40');
+			cell.appendChild(e2);
+		}
+
+		function removeRowFromTabletblOpenSrc()
+		{
+			var tbl = document.getElementById('tblOpenSrc');
+			var lastRow = tbl.rows.length;
+			--counttblOpenSrc;
+			if (lastRow > 3) tbl.deleteRow(lastRow - 1);
+		}
+
+		function addRowToTabletblOpenSrcMod()
+		{
+			++counttblOpenSrcMod;
+			var tbl = document.getElementById('tblOpenSrcMod');
+			var lastRow = tbl.rows.length;
+			// if there's no header row in the table, then iteration = lastRow + 1
+			var iteration = lastRow-1;
+			var row = tbl.insertRow(lastRow);
+
+			var cellRight = row.insertCell(0);
+			var el = document.createElement('input');
+			el.setAttribute('type', 'text');
+			el.setAttribute('id', 'modopsslabel' + iteration);
+			el.setAttribute('size', '40');
+			cellRight.appendChild(el);
+
+			var cell = row.insertCell(1);
+			var e2 = document.createElement('input');
+			e2.setAttribute('type', 'text');
+			e2.setAttribute('id', 'modopsspath' + iteration);
+			e2.setAttribute('size', '40');
+			cell.appendChild(e2);
+		}
+
+		function removeRowFromTabletblOpenSrcMod()
+		{
+			var tbl = document.getElementById('tblOpenSrcMod');
+			var lastRow = tbl.rows.length;
+			--counttblOpenSrc;
+			if (lastRow > 3) tbl.deleteRow(lastRow - 1);
+		}
+
+		function addRowToTabletblOpenSrcAttributions()
+		{
+			++counttblOpenSrcAttributions;
+			var tbl = document.getElementById('tblOpenSrcAttributions');
+			var lastRow = tbl.rows.length;
+			// if there's no header row in the table, then iteration = lastRow + 1
+			var iteration = lastRow-1;
+			var row = tbl.insertRow(lastRow);
+
+			var cellRight = row.insertCell(0);
+			var el = document.createElement('input');
+			el.setAttribute('type', 'text');
+			el.setAttribute('id', 'attrlabel' + iteration);
+			el.setAttribute('size', '40');
+			cellRight.appendChild(el);
+
+			var cell = row.insertCell(1);
+			var e2 = document.createElement('input');
+			e2.setAttribute('type', 'text');
+			e2.setAttribute('id', 'attrpath' + iteration);
+			e2.setAttribute('size', '40');
+			cell.appendChild(e2);
+		}
+
+		function removeRowFromTabletblOpenSrcAttributions()
+		{
+			var tbl = document.getElementById('tblOpenSrcAttributions');
+			var lastRow = tbl.rows.length;
+			--counttblOpenSrcAttributions;
+			if (lastRow > 3) tbl.deleteRow(lastRow - 1);
+		}
+
+		function toggleVisibilityloc(cb)
+		 {
+			  var x = document.getElementById("localblock");
+			  if(cb.checked==true)
+			   x.style.visibility = "visible"; // or x.style.display = "none";
+			  else 
+			   x.style.visibility = "hidden";
+		 }
+		function toggleVisibilityext(cb)
+		 {
+			  var x = document.getElementById("externalblock");
+			  if(cb.checked==true)
+			   x.style.visibility = "visible"; // or x.style.display = "none";
+			  else 
+			   x.style.visibility = "hidden";
+		 }
+		function toggleVisibilityopssorig(cb)
+		 {
+			  var x = document.getElementById("opssorig");
+			  if(cb.checked==true)
+			   x.style.visibility = "visible"; // or x.style.display = "none";
+			  else 
+			   x.style.visibility = "hidden";
+		 }
+		function toggleVisibilityopssmod(cb)
+		 {
+			  var x = document.getElementById("opssmod");
+			  if(cb.checked==true)
+			   x.style.visibility = "visible"; // or x.style.display = "none";
+			  else 
+			   x.style.visibility = "hidden";
+		 }
+		function showopss(cb)
+		 {
+			  var x = document.getElementById("opensrcblock");
+			  x.style.visibility = "visible"; // or x.style.display = "none";
+		 }
+		function hideopss(cb)
+		 {
+			  var x = document.getElementById("opensrcblock");
+			  x.style.visibility = "hidden";
+
+		 }
+
+		function verify() {
+			var themessage = "You are required to complete the following fields: ";
+			var fso = new ActiveXObject("Scripting.FileSystemObject");  
+			var s = fso.CreateTextFile('Branch_Request_Form.doc');
+			//alert("emails: "+countemail);
+			//alert("counts: "+counttblSample+"   "+counttblDocumentationLocal+"  "+counttblDocumentationExternal+"   "+counttblOpenSrcAttributions+"      "+counttblOpenSrc);
+			if(document.getElementById("product").value == "") {
+				themessage = themessage + "\n -- Product not mentioned";
+				s.write("Error here in product!! \n");
+			} else {
+				s.write("\nProduct: " + arr[document.getElementById("product").value]);
+			}
+			if(document.getElementById("version").value == "" || document.getElementById("version").value == "3.x") {
+				themessage = themessage + "\n -- Version not mentioned";
+				s.write("Error here in version!! \n");
+			} else {
+				s.write("\nVersion: " + document.getElementById("version").value);
+			}
+			if(countemail!=0) {
+				s.write("\nWatchers:\n");
+				var watcherss = document.getElementById("watchers");
+				var options = watcherss.getElementsByTagName("option");
+				do {
+					s.write(options[countemail-1].value + "\n");
+					--countemail;
+				}while(countemail!=0);
+			}
+			s.write("\n\nProduct Images \n");
+			do {
+				if(document.getElementById("primglabel"+counttblSample).value == "" || document.getElementById("primgpath"+counttblSample).value == "") {
+					//alert("One of the required fields in Product Images is null");
+					themessage = themessage + "\n -- Some of the required fields in Product Images are null";
+					s.write("Error here in product images !!\n");
+					break;
+				} else {
+					s.write("\nLabel: " + document.getElementById("primglabel"+counttblSample).value + "\nPath: " + document.getElementById("primgpath"+counttblSample).value + "\nBlock: " +document.getElementById("primgblock"+counttblSample).value + "\nDescription:   " + document.getElementById("primgdesc"+counttblSample).value + "\n");
+					--counttblSample;
+				}
+			} while(counttblSample != 0);
+			if (document.getElementById("local").checked == false && document.getElementById("external").checked == false) 
+				themessage = themessage + "\n -- Check one of the document types";
+			if (document.getElementById("local").checked == true) {
+				s.write("\nLocal Documentation \n");
+				do { 
+					if(document.getElementById("docloclabel"+counttblDocumentationLocal).value == "" || document.getElementById("doclocpath"+counttblDocumentationLocal).value == "") {
+						//alert("One of the required fields in Local Documentation is null");
+						themessage = themessage + "\n -- Some of the required fields in Local Documentation are null";
+						s.write("Error in Local Documentation \n");
+						break;
+					} else {
+						s.write("\nLabel: " + document.getElementById("docloclabel"+counttblDocumentationLocal).value + "\nPath: " + document.getElementById("doclocpath"+counttblDocumentationLocal).value + "\nBlock: " +document.getElementById("doclocblock"+counttblDocumentationLocal).value + "\nDescription: " + document.getElementById("doclocdesc"+counttblDocumentationLocal).value + "\n");
+						--counttblDocumentationLocal;
+					}
+				} while(counttblDocumentationLocal != 0);
+			}
+			if (document.getElementById("external").checked == true) {
+				s.write("\nExternal Documentation \n");
+				do { 
+					if(document.getElementById("docextlabel"+counttblDocumentationExternal).value == "" || document.getElementById("docextpath"+counttblDocumentationExternal).value == "") {
+						//alert("One of the required fields in Local Documentation is null");
+						themessage = themessage + "\n -- Some of the required fields in External Documentation are null";
+						s.write("Error in External Documentation \n");
+						break;
+					} else {
+						s.write("\nLabel: " + document.getElementById("docextlabel"+counttblDocumentationExternal).value + "\nURL: " + document.getElementById("docextpath"+counttblDocumentationExternal).value + "\nBlock: " +document.getElementById("docextblock"+counttblDocumentationExternal).value + "\nDescription: " + document.getElementById("docextdesc"+counttblDocumentationExternal).value + "\n");
+						--counttblDocumentationExternal;
+					}
+				} while(counttblDocumentationExternal != 0);
+			}
+			if (document.getElementById("opssyes").checked == true) { 
+				if (document.getElementById("original").checked == false && document.getElementById("modified").checked == false) 
+					themessage = themessage + "\n -- Check one of the Open Source types";
+				s.write("\nOpen Sources (Original)\n");
+				do {
+					if(document.getElementById("opsslabel"+counttblOpenSrc).value == "" || document.getElementById("opsspath"+counttblOpenSrc).value == "") {
+						//alert("One of the required fields in Open Source is null");
+						themessage = themessage + "\n -- Some of the required fields in Open Source (Original) are null";
+						s.write("Error in Open Sources (Original)\n");
+						break;
+					} else {
+						s.write("\nLabel: " + document.getElementById("opsslabel"+counttblOpenSrc).value + "\nPath: " + document.getElementById("opsspath"+counttblOpenSrc).value + "\n");
+						--counttblOpenSrc;
+					}
+				} while(counttblOpenSrc != 0);
+				s.write("\nOpen Sources (Modified)\n");
+				do {
+					if(document.getElementById("modopsslabel"+counttblOpenSrcMod).value == "" || document.getElementById("modopsspath"+counttblOpenSrcMod).value == "") {
+						//alert("One of the required fields in Open Source is null");
+						themessage = themessage + "\n -- Some of the required fields in Open Source (Modified) are null";
+						s.write("Error in Open Sources (Modified)\n");
+						break;
+					} else {
+						s.write("\nLabel: " + document.getElementById("modopsslabel"+counttblOpenSrcMod).value + "\nPath: " + document.getElementById("modopsspath"+counttblOpenSrcMod).value + "\n");
+						--counttblOpenSrcMod;
+					}
+				} while(counttblOpenSrcMod != 0);
+				s.write("\nOpen Source Attributions\n");
+				do { 
+					if(document.getElementById("attrlabel"+counttblOpenSrcAttributions).value == "" || document.getElementById("attrpath"+counttblOpenSrcAttributions).value == "") {
+						//alert("One of the required fields in Open Source Attributions is null");
+						themessage = themessage + "\n -- Some of the required fields in Open Source Attributions are null";
+						s.write("Error in Open Source Attributions \n");
+						break;
+					} else {
+						s.write("\nLabel: " + document.getElementById("attrlabel"+counttblOpenSrcAttributions).value + "\nPath: " + document.getElementById("attrpath"+counttblOpenSrcAttributions).value + "\n");
+						--counttblOpenSrcAttributions;
+					}
+				} while(counttblOpenSrcAttributions != 0);
+				
+			}
+			s.close();
+			if (themessage == "You are required to complete the following fields: ") {
+				
+				document.form.submit();
+				
+			} else {
+				alert(themessage);
+				goBack();
+				return false;
+		   }
+		}
+		function goBack(){
+		 window.history.back();
+		}
+		function addItem(){
+				++countemail;
+				var e1=document.getElementById('watcher');
+				var e2=document.getElementById('watchers');
+				var o=document.createElement('option');
+				o.value=e1.value;
+				o.text=e1.value;
+				e2.options.add(o);
+			}
+	</script>
+	</head>
+	<body>
+	<center><h2><u><i>Web Posting Request Form</i></u></h2></center>
+	<h4><u>Instructions</u></h4>
+	<ol>
+	<li>Copy all images and sha1sum files (and documentation that will not be posted by TechPubs) to the pre-staging area for your product.<br/>
+(for example, the Security Design product pre-staging area is: qa-tftp:/volume/sd-forweb)
+</li>
+	<li>The full path of all images from step #1 needs to be filled out below.</li>
+	<li>The Label field for images below is required for every image provided in step #1</li>
+	<li>The full path to documentation (or complete URL) must be filled out.</li>
+	<li>The label field for each piece of documentation must be filled out.</li>
+	<li>Every Block designation will default to Software or Documentation.</li>
+	<li>Every Description field defaults to being empty.</li>
+	<li>If you don’t know the contents of a required field, state so explicitly in the field, but <b>DO NOT leave it blank</b>.</li>
+	<li>Browser supported for opening this page: Internet Explorer.</li>
+	<li>ActiveX Controls and pop-ups should be allowed.</li>
+	<li>All the fields marked (*) are mandatory.</li>
+	</ol>
+	
+		<form action="" autocomplete="on" method="post">
+			<center>
+			<table border = "2" id = "inittable">
+				<tr>
+				<td>Products
+					<select size="multiple" name="dd1" id="product">
+					<script language="javascript">
+						document.write("<option value=\"\">"+"Select.."+"</option>")
+						for(i=0;i<arr.length;i++)
+							document.write("<option value="+i+">"+arr[i]+"</option>")
+					</script>
+					</select>
+				</td>
+				<td>Version <input type="text" id="version" size="10" value="3.x"/> </td>
+				</tr>
+			</table>
+			</center>
+			<br/>
+			<br/>
+			<table border="1" id="tblSample">
+				<tr>
+				<th colspan="4">Product Images <input type="button" value="+" onclick="addRowToTabletblSample();" />
+				<input type="button" value="-" onclick="removeRowFromTabletblSample();" /></th>
+				</tr>
+				<tr><td><b>Label*</b></td><td><b>Path*</b></td><td><b>Block</b></td><td><b>Description</b></td></tr>
+				<tr>
+				<td><input type="text" id="primglabel1" size="40" /></td>
+				<td><input type="text" id="primgpath1" size="40" /></td>
+				<td><input type="text" id="primgblock1" size="40" /></td>
+				<td><input type="text" id="primgdesc1" size="40" /></td>
+				</tr>
+			</table>
+			<br />
+			<br />
+			<h3>Documentation (Select at least one type)</h3>
+			<input type="checkbox" name="documentation" value="local" id="local" checked="checked" onClick="toggleVisibilityloc(this)" />Local<br>
+			<input type="checkbox" name="documentation" value="external" id ="external" checked="checked" onClick="toggleVisibilityext(this)" />External (Ex: By TechPubs) 
+			<div id="localblock">
+				<table border="1" id="tblDocumentationLocal">
+					<tr>
+					<th colspan="4">Documentation Local <input type="button" value="+" onclick="addRowToTabletblDocumentationLocal();" />
+					<input type="button" value="-" onclick="removeRowFromTabletblDocumentationLocal();" /></th>
+					</tr>
+					<tr><td><b>Label*</b></td><td><b>Path*</b></td><td><b>Block</b></td><td><b>Description</b></td></tr>
+					<tr>
+					<td><input type="text" id="docloclabel1" size="40" /></td>
+					<td><input type="text" id="doclocpath1" size="40"  /></td>
+					<td><input type="text" id="doclocblock1" size="40" /></td>
+					<td><input type="text" id="doclocdesc1" size="40" /></td>
+					</tr>
+				</table>
+			</div>
+			<div id="externalblock">
+				<table border="1" id="tblDocumentationExternal">
+					<tr>
+					<th colspan="4">Documentation External <input type="button" value="+" onclick="addRowToTabletblDocumentationExternal();" />
+					<input type="button" value="-" onclick="removeRowFromTabletblDocumentationExternal();" /></th>
+					</tr>
+					<tr><td><b>Label*</b></td><td><b>URL*</b></td><td><b>Block</b></td><td><b>Description</b></td></tr>
+					<tr>
+					<td><input type="text" id="docextlabel1" size="40"  /></td>
+					<td><input type="text" id="docextpath1" size="40"  /></td>
+					<td><input type="text" id="docextblock1" size="40" /></td>
+					<td><input type="text" id="docextdesc1" size="40" /></td>
+					</tr>
+				</table>
+			</div>
+			<br/>
+			<h3>Open Source
+			<input type="radio" name="opss" id="opssyes" value="yes" checked="yes" onClick="showopss(this)">Yes
+			<input type="radio" name="opss" id="opssno" value="no" onClick="hideopss(this)">No</h3>
+			<div id = "opensrcblock">
+				<h4>Type
+				<input type="checkbox" name="opsstype" id="original" value="original" checked="checked" onClick="toggleVisibilityopssorig(this)">Original
+				<input type="checkbox" name="opsstype" id="modified" value="modified" checked="checked" onClick="toggleVisibilityopssmod(this)">Modified</h4>
+				<div id="opssorig">
+					<table border="1" id="tblOpenSrc">
+						<tr>
+						<th colspan="4">Open Sources (Original) <input type="button" value="+" onclick="addRowToTabletblOpenSrc();" />
+						<input type="button" value="-" onclick="removeRowFromTabletblOpenSrc();" /></th>
+						</tr>
+						<tr><td><b>Label*</b></td><td><b>Path*</b></td></tr>
+						<tr>
+						<td><input type="text" id="opsslabel1" size="40"  /></td>
+						<td><input type="text" id="opsspath1" size="40"  /></td>
+						</tr>
+					</table>
+				</div>
+				<div id="opssmod">
+					<table border="1" id="tblOpenSrcMod">
+						<tr>
+						<th colspan="4">Open Sources (Modified) <input type="button" value="+" onclick="addRowToTabletblOpenSrcMod();" />
+						<input type="button" value="-" onclick="removeRowFromTabletblOpenSrcMod();" /></th>
+						</tr>
+						<tr><td><b>Label*</b></td><td><b>Path*</b></td></tr>
+						<tr>
+						<td><input type="text" id="modopsslabel1" size="40"  /></td>
+						<td><input type="text" id="modopsspath1" size="40"  /></td>
+						</tr>
+					</table>
+				</div>
+				<table border="1" id="tblOpenSrcAttributions">
+					<tr>
+					<th colspan="4">Attributions <input type="button" value="+" onclick="addRowToTabletblOpenSrcAttributions();" />
+					<input type="button" value="-" onclick="removeRowFromTabletblOpenSrcAttributions();" /></th>
+					</tr>
+					<tr><td><b>Label*</b></td><td><b>Path*</b></td></tr>
+					<tr>
+					<td><input type="text" id="attrlabel1" size="40"  /></td>
+					<td><input type="text" id="attrpath1" size="40"  /></td>
+					</tr>
+				</table>
+			</div>
+			<br/>
+			<b>Watchers</b> <select multiple name="watchers" id="watchers" size="3"></select> 
+			<br/>
+			<input type="email" id="watcher" pattern="[^ @]*@[^ @]*" value="a@foo.com"> <input type="button" value="+" onclick="addItem();"/>
+			<br/><br/><center>
+			<input type="submit" value="Submit" onclick="verify();"/><input type="reset" value="Clear Form"></center>
+		</form>
+	</body>
+</html>
